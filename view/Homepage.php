@@ -1,3 +1,10 @@
+<?php 
+session_start();
+include("sendinfo.php")
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +43,7 @@ MindSync Homepage
                 <span>Settings</span>
              </a>
             </li>
-            <li class="logout"><a href="Login Page.html">
+            <li class="logout"><a href="Login Page.php">
                 <i class="fas fa-sign-out-alt"></i>
                 <span>Logout</span>
              </a>
@@ -47,8 +54,17 @@ MindSync Homepage
     <div class="main--content">
         <div class="header--wrapper">
             <div class="header--title">
-                <span>Welcome</span>
-                <h2>David</h2>
+                <span>Welcome
+                </span>
+                <h2><?php 
+                 if(isset($_SESSION['registeremail'])){
+                  $registeremail=$_SESSION['registeremail'];
+                  $query=mysqli_query($conn,"SELECT register.* From register WHERE register.registeremail='$registeremail'");
+                  while($row=mysqli_fetch_array($query)){
+                    echo $row['firstName'].' '.$row['lastName'];
+                }
+                 }
+                ?></h2>
             </div>
             <div class="user--info">
                 <a href="MemoryMainPage.html">
@@ -59,7 +75,7 @@ MindSync Homepage
         </div>
     
 
-<div class="main"></div>
+        <div class="main"></div>
 <div class="statsContainer">
     <div class="statistics">
         <div class="stat-box Memory Stats" onclick="redirectToMemoryPage('Memory Stats')">Memory Stats: <span id="Memory Stats-store">Date Game Last Score: 12</span>  
@@ -74,6 +90,8 @@ MindSync Homepage
     <script src="../js/homescript.js"></script>
     <script src="../js/QuizScript.js"></script>
     <script src="../js/DateGameScript.js"></script>
+
+
 
 
 

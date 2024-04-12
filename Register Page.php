@@ -15,43 +15,43 @@ MindSync Register
     <div class="curve-shape"></div>
     <div class="form-box Register">
         <h2>REGISTER</h2>
-        <form action="../settings/connection.php" method="post">
+        <form action="sendinfo.php" method="post">
            <div class="input-box">
-            <input type="text" pattern="[A-Za-z ]+"  id="firstName" title="Only letters please!" required>
+            <input type="text" pattern="[A-Za-z ]+"  id="firstName" name="firstName" title="Only letters please!" required>
             <label for="">First name</label>
             <i class="fa-solid fa-user"></i>
            </div>
            
            <div class="input-box">
-            <input type="text" pattern="[A-Za-z ]+" id="lastName" title="Only letters please!" required>
+            <input type="text" pattern="[A-Za-z ]+" id="lastName" name="lastName" title="Only letters please!" required>
             <label for="">Last name</label>
             <i class="fa-solid fa-user"></i>
            </div>
            
 
            <div class="input-box">
-            <input type="email"  id="registeremail"required>
+            <input type="email"  id="registeremail" name="registeremail"required>
             <label for="">Email</label>
             <i class="fa-solid fa-envelope"></i>
            </div>
 
            <div class="input-box">
-            <input type="password"  id="password" pattern="(?=.*\d)(?=.*[a-zA-Z]).{8,}" title="Password must contain at least 1 letter, 1 number, and be at least 8 characters long" required>
+            <input type="password"  id="password" name="password" pattern="(?=.*\d)(?=.*[a-zA-Z]).{8,}" title="Password must contain at least 1 letter, 1 number, and be at least 8 characters long" required>
             <label for="">Password</label>
             <i class="fa-solid fa-lock"></i>
            </div>
               
            <div class="input-box">
-            <input type="password"  id="retypepassword" pattern="(?=.*\d)(?=.*[a-zA-Z]).{8,}" title="Password must contain at least 1 letter, 1 number, and be at least 8 characters long" required>
+            <input type="password"  id="retypepassword" name="retypepassword" pattern="(?=.*\d)(?=.*[a-zA-Z]).{8,}" title="Password must contain at least 1 letter, 1 number, and be at least 8 characters long" required>
             <label for="">Re-type Password</label>
             <i class="fa-solid fa-lock"></i>
            </div>
 
            <div class="input-box">
-            <button class="loginbtn" type="submit">REGISTER</button>
+            <button class="loginbtn" type="submit" name="registerinfo">REGISTER</button>
            </div>
            <div class="regi-link">
-            <p>Already have an account?<a href="Login Page.html" class="SignUpLink"> Login!</a></p>
+            <p>Already have an account?<a href="Login Page.php" class="SignUpLink"> Login!</a></p>
            </div>
         </form>
     </div>

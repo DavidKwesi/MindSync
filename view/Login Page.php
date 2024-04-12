@@ -15,23 +15,23 @@ MindSync Login
     <div class="curve-shape"></div>
     <div class="form-box Login">
         <h2>LOGIN</h2>
-        <form action="connection.php" method="post">
+        <form action="sendinfo.php" method="post">
            <div class="input-box">
-            <input type="text" required>
-            <label for="">Username/Email</label>
+            <input type="text" name="useremail"required>
+            <label for="">Email</label>
             <i class="fa-solid fa-user"></i>
            </div>
 
            <div class="input-box">
-            <input type="password" required>
+            <input type="password" id="password" name="password" required>
             <label for="">Password</label>
             <i class="fa-solid fa-lock"></i>
            </div>
            <div class="input-box">
-            <button class="loginbtn" id="loginButton" type="button"onclick="redirectToHomepage()">LOGIN</button>
+            <button class="loginbtn" id="loginButton" name="logininfo" type="submit">LOGIN</button>
            </div>
            <div class="regi-link">
-            <p>Don't have an account?<a href="Register Page.html" class="SignUpLink"> Sign Up Here!</a></p>
+            <p>Don't have an account?<a href="Register Page.php" class="SignUpLink"> Sign Up Here!</a></p>
            </div>
         </form>
     </div>

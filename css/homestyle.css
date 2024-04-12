@@ -71,6 +71,10 @@ body {
 .menu a i{
    font-size: 1.2rem; 
 }
+.user--info a i.fa-envelope {
+  color: gold;
+}
+
 
 .logout{
     position: aboslute;
@@ -96,8 +100,8 @@ body {
   }
   
   .stat-box {
-    width: 150px;
-    height: 100px;
+    width: 400px;
+    height: 400px;
     border: 2px solid #333;
     border-radius: 5px;
     cursor: pointer;
@@ -108,6 +112,7 @@ body {
     margin-right:10px;
     margin-left:20px;
     color:gold;
+    margin-top: 100px;
   }
   
   .Daily {
@@ -133,6 +138,44 @@ body {
   }
   
   .stat-box span {
-    font-weight: bold;
-    font-size: 1.2em;
+    font-size: 20px;
   }
+
+
+
+  .main--content{
+    position:relative;
+    background:#ebe9e9;
+    color:#fff;
+    width:100%;
+    padding:1rem;
+}
+
+.header--wrapper img {
+    width:45px;
+    height:50px;
+    cursor:pointer;
+    border-radius: 50%;
+}
+
+.header--wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    flex-wrap: wrap;
+    background: #143447;
+    border-radius: 10px;
+    padding: 10px 2rem;
+    margin-bottom: 1rem;
+}
+
+.header--title{
+    color: gold
+}
+
+.user--info{
+    display: flex;
+    align-items: center;
+    gap:1rem;
+}
+
